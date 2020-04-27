@@ -135,7 +135,7 @@ int main() {
     // Name des Image files
     char filename[] = "testFile";
     // Dimensionen des Image files
-    int wid = 1280, hei = 720, dep = 3;
+    int wid = 1280, hei = 1280, dep = 3;
 
     // Pixel matrix
     unsigned char *pixelMatrix = calloc(wid * hei * dep, sizeof(unsigned char));
