@@ -73,6 +73,7 @@ void applyShade(int value, int maxValue, unsigned char *rgb) {
 
 // Schreibt header und pixel matrix im ppm Format
 // wb -> write binary mode
+// http://rosettacode.org/wiki/Bitmap/Write_a_PPM_file#C
 void ppmImageFromArray(int wid, int hei, int dep, unsigned char matrix[wid][hei][dep], const char *imageName) {
     int nameLen = sizeof(&imageName);
     char fileName[nameLen + 4];
