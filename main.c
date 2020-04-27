@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 // Komplexe Zahlen zur Wiederverwendung auf Heap ablegen
@@ -134,12 +135,12 @@ int main() {
     // Name des Image files
     char filename[] = "testFile";
     // Dimensionen des Image files
-    int wid = 400, hei = 400, dep = 3;
+    int wid = 1280, hei = 720, dep = 3;
 
     // Pixel matrix
-    unsigned char pixelMatrix[wid][hei][dep];
+    unsigned char *pixelMatrix = calloc(wid * hei * dep, sizeof(unsigned char));
     // Complexe Matrix
-    double complexMatrix[wid][hei][2];
+    double *complexMatrix = calloc(wid * hei * dep, sizeof(double));
 
     // Komplexe Matrix mit Linespace füllen
     fillComplexMatrix(realScope[0], realScope[1], imaginaryScope[0], imaginaryScope[1], wid, hei, complexMatrix);
